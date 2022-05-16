@@ -1,0 +1,37 @@
+<%= form_with(model: medium) do |form| %>
+  <% if medium.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(medium.errors.count, "error") %> prohibited this medium from being saved:</h2>
+
+      <ul>
+        <% medium.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :media_id, style: "display: block" %>
+    <%= form.number_field :media_id %>
+  </div>
+
+  <div>
+    <%= form.label :media_name, style: "display: block" %>
+    <%= form.text_field :media_name %>
+  </div>
+
+  <div>
+    <%= form.label :media_top_url, style: "display: block" %>
+    <%= form.text_field :media_top_url %>
+  </div>
+
+  <div>
+    <%= form.label :media_icon_path, style: "display: block" %>
+    <%= form.text_field :media_icon_path %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
