@@ -72,3 +72,6 @@ group :test do
 end
 
 gem 'bootstrap', '~> 5.0.2'
+
+gem 'rubocop', require:false
+gem 'rubocop-rails', require:false
