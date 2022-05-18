@@ -71,7 +71,7 @@ group :test do
   gem "webdrivers"
 end
 
-gem 'bootstrap', '~> 5.0.2'
+gem "cssbundling-rails"
 
 gem 'rubocop', require:false
 gem 'rubocop-rails', require:false
