@@ -75,3 +75,6 @@ gem "cssbundling-rails"
 
 gem 'rubocop', require:false
 gem 'rubocop-rails', require:false
+
+gem 'feedjira'
+gem 'httparty'

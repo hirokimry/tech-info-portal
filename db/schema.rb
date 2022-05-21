@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_16_124639) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_21_125504) do
   create_table "articles", force: :cascade do |t|
     t.integer "article_id"
     t.integer "media_id"
@@ -21,9 +21,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_16_124639) do
     t.integer "article_access_num"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "feed_id"
   end
 
-  create_table "homes", force: :cascade do |t|
+  create_table "feeds", force: :cascade do |t|
+    t.string "name"
+    t.string "url"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
