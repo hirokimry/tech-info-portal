@@ -1,22 +1,40 @@
 <header class="header">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">LOGO</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand"
+         href="#">LOGO</a>
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse"
+           id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
+            <a class="nav-link dropdown-toggle"
+               href="#"
+               id="navbarDropdown"
+               role="button"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">
               登録メディア一覧
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">A</a></li>
-              <li><a class="dropdown-item" href="#">B</a></li>
-              <li><a class="dropdown-item" href="#">C</a></li>
+            <ul class="dropdown-menu"
+                aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item"
+                   href="#">A</a>
+              </li>
+              <li><a class="dropdown-item"
+                   href="#">B</a>
+              </li>
+              <li><a class="dropdown-item"
+                   href="#">C</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -27,70 +45,122 @@
 
 <div class="container-fluid d-flex flex-column align-items-center">
   <div class="row">
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="pills-new-arrivals-tab" data-bs-toggle="pill"
-          data-bs-target="#pills-new-arrivals" type="button" role="tab" aria-controls="pills-new-arrivals"
-          aria-selected="true">
+    <ul class="nav nav-pills mb-3"
+        id="pills-tab"
+        role="tablist">
+      <li class="nav-item"
+          role="presentation">
+        <button class="nav-link active"
+                id="pills-new-arrivals-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-new-arrivals"
+                type="button"
+                role="tab"
+                aria-controls="pills-new-arrivals"
+                aria-selected="true">
           新着
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-daily-ranking-tab" data-bs-toggle="pill"
-          data-bs-target="#pills-daily-ranking" type="button" role="tab" aria-controls="pills-daily-ranking"
-          aria-selected="false">
+      <li class="nav-item"
+          role="presentation">
+        <button class="nav-link"
+                id="pills-daily-ranking-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-daily-ranking"
+                type="button"
+                role="tab"
+                aria-controls="pills-daily-ranking"
+                aria-selected="false">
           デイリーランキング
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-weekly-ranking-tab" data-bs-toggle="pill"
-          data-bs-target="#pills-weekly-ranking" type="button" role="tab" aria-controls="pills-weekly-ranking"
-          aria-selected="false">
+      <li class="nav-item"
+          role="presentation">
+        <button class="nav-link"
+                id="pills-weekly-ranking-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-weekly-ranking"
+                type="button"
+                role="tab"
+                aria-controls="pills-weekly-ranking"
+                aria-selected="false">
           週間ランキング
         </button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-monthly-ranking-tab" data-bs-toggle="pill"
-          data-bs-target="#pills-monthly-ranking" type="button" role="tab" aria-controls="pills-monthly-ranking"
-          aria-selected="false">
+      <li class="nav-item"
+          role="presentation">
+        <button class="nav-link"
+                id="pills-monthly-ranking-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-monthly-ranking"
+                type="button"
+                role="tab"
+                aria-controls="pills-monthly-ranking"
+                aria-selected="false">
           月間ランキング
         </button>
       </li>
     </ul>
-    <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-new-arrivals" role="tabpanel"
-        aria-labelledby="pills-new-arrivals-tab">
-        新着記事一覧
+    <div class="tab-content"
+         id="pills-tabContent">
+      <div class="tab-pane fade show active"
+           id="pills-new-arrivals"
+           role="tabpanel"
+           aria-labelledby="pills-new-arrivals-tab">
+        <% @articles.each do |article| %>
+        <%= article.article_title %><br>
+        <% end %>
       </div>
-      <div class="tab-pane fade" id="pills-daily-ranking" role="tabpanel" aria-labelledby="pills-daily-ranking-tab">
+      <div class="tab-pane fade"
+           id="pills-daily-ranking"
+           role="tabpanel"
+           aria-labelledby="pills-daily-ranking-tab">
         デイリーランキング記事
       </div>
-      <div class="tab-pane fade" id="pills-weekly-ranking" role="tabpanel" aria-labelledby="pills-weekly-ranking-tab">
+      <div class="tab-pane fade"
+           id="pills-weekly-ranking"
+           role="tabpanel"
+           aria-labelledby="pills-weekly-ranking-tab">
         週間ランキング記事
       </div>
-      <div class="tab-pane fade" id="pills-monthly-ranking" role="tabpanel" aria-labelledby="pills-monthly-ranking-tab">
+      <div class="tab-pane fade"
+           id="pills-monthly-ranking"
+           role="tabpanel"
+           aria-labelledby="pills-monthly-ranking-tab">
         月間ランキング記事
       </div>
     </div>
   </div>
 
-  <div class="row">広告</div>
   <div class="row">
-    <div class="col">MediaName</div>
-    <div class="col">MediaName</div>
+    広告</div>
+  <div class="row">
+    <div class="col">
+      MediaName
+    </div>
+    <div class="col">
+      MediaName
+    </div>
   </div>
   <div class="row">
-    <div class="col">MediaName</div>
-    <div class="col">MediaName</div>
+    <div class="col">
+      MediaName
+    </div>
+    <div class="col">
+      MediaName
+    </div>
   </div>
   <div class="row">
-    <div class="col">広告</div>
-    <div class="col">広告</div>
+    <div class="col">広告
+    </div>
+    <div class="col">広告
+    </div>
   </div>
 </div>
 
 <footer class="footer">
   <div class="container d-flex flex-column align-items-center">
-    <p class="text-muted">Copyright © 2022 Hiroki Moriya All rights reserved.</p>
+    <p class="text-muted">
+      Copyright © 2022 Hiroki Moriya All rights reserved.</p>
   </div>
 </footer>
