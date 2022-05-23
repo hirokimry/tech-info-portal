@@ -107,8 +107,13 @@
            id="pills-new-arrivals"
            role="tabpanel"
            aria-labelledby="pills-new-arrivals-tab">
-        <% @articles.each do |article| %>
-        <%= article.article_title %><br>
+        <% @articles.order(publication_date: :desc).limit(10).each do |article| %>
+        <%= "#{article.publication_date}: #{article.medium_id}: " %>
+        <a href="<%= article.url %>"
+           class="link-secondary"
+           target=”_blank”>
+          <%= article.title %>
+        </a><br>
         <% end %>
       </div>
       <div class="tab-pane fade"

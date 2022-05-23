@@ -1,19 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  article_id: 1
-  media_id: 1
-  article_title: MyString
-  article_url: MyString
-  article_image_path: MyString
-  article_update_datetime: 2022-05-16 21:43:57
-  article_access_num: 1
+  medium_id: 1
+  title: MyString
+  url: MyString
+  image_path: MyString
+  publication_date: 2022-05-23 14:43:07
+  access_count: 1
 
 two:
-  article_id: 1
-  media_id: 1
-  article_title: MyString
-  article_url: MyString
-  article_image_path: MyString
-  article_update_datetime: 2022-05-16 21:43:57
-  article_access_num: 1
+  medium_id: 1
+  title: MyString
+  url: MyString
+  image_path: MyString
+  publication_date: 2022-05-23 14:43:07
+  access_count: 1

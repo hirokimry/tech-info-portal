@@ -14,10 +14,9 @@ class MediaTest < ApplicationSystemTestCase
     visit media_url
     click_on "New medium"
 
-    fill_in "Media icon path", with: @medium.media_icon_path
-    fill_in "Media", with: @medium.media_id
-    fill_in "Media name", with: @medium.media_name
-    fill_in "Media top url", with: @medium.media_top_url
+    fill_in "Icon path", with: @medium.icon_path
+    fill_in "Name", with: @medium.name
+    fill_in "Rss url", with: @medium.rss_url
     click_on "Create Medium"
 
     assert_text "Medium was successfully created"
@@ -28,10 +27,9 @@ class MediaTest < ApplicationSystemTestCase
     visit medium_url(@medium)
     click_on "Edit this medium", match: :first
 
-    fill_in "Media icon path", with: @medium.media_icon_path
-    fill_in "Media", with: @medium.media_id
-    fill_in "Media name", with: @medium.media_name
-    fill_in "Media top url", with: @medium.media_top_url
+    fill_in "Icon path", with: @medium.icon_path
+    fill_in "Name", with: @medium.name
+    fill_in "Rss url", with: @medium.rss_url
     click_on "Update Medium"
 
     assert_text "Medium was successfully updated"

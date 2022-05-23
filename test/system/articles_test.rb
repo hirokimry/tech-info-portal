@@ -14,13 +14,12 @@ class ArticlesTest < ApplicationSystemTestCase
     visit articles_url
     click_on "New article"
 
-    fill_in "Article access num", with: @article.article_access_num
-    fill_in "Article", with: @article.article_id
-    fill_in "Article image path", with: @article.article_image_path
-    fill_in "Article title", with: @article.article_title
-    fill_in "Article update datetime", with: @article.article_update_datetime
-    fill_in "Article url", with: @article.article_url
-    fill_in "Media", with: @article.media_id
+    fill_in "Access count", with: @article.access_count
+    fill_in "Image path", with: @article.image_path
+    fill_in "Medium", with: @article.medium_id
+    fill_in "Publication date", with: @article.publication_date
+    fill_in "Title", with: @article.title
+    fill_in "Url", with: @article.url
     click_on "Create Article"
 
     assert_text "Article was successfully created"
@@ -31,13 +30,12 @@ class ArticlesTest < ApplicationSystemTestCase
     visit article_url(@article)
     click_on "Edit this article", match: :first
 
-    fill_in "Article access num", with: @article.article_access_num
-    fill_in "Article", with: @article.article_id
-    fill_in "Article image path", with: @article.article_image_path
-    fill_in "Article title", with: @article.article_title
-    fill_in "Article update datetime", with: @article.article_update_datetime
-    fill_in "Article url", with: @article.article_url
-    fill_in "Media", with: @article.media_id
+    fill_in "Access count", with: @article.access_count
+    fill_in "Image path", with: @article.image_path
+    fill_in "Medium", with: @article.medium_id
+    fill_in "Publication date", with: @article.publication_date
+    fill_in "Title", with: @article.title
+    fill_in "Url", with: @article.url
     click_on "Update Article"
 
     assert_text "Article was successfully updated"

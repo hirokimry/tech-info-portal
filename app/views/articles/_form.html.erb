@@ -12,38 +12,33 @@
   <% end %>
 
   <div>
-    <%= form.label :article_id, style: "display: block" %>
-    <%= form.number_field :article_id %>
+    <%= form.label :medium_id, style: "display: block" %>
+    <%= form.number_field :medium_id %>
   </div>
 
   <div>
-    <%= form.label :media_id, style: "display: block" %>
-    <%= form.number_field :media_id %>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
   </div>
 
   <div>
-    <%= form.label :article_title, style: "display: block" %>
-    <%= form.text_field :article_title %>
+    <%= form.label :url, style: "display: block" %>
+    <%= form.text_field :url %>
   </div>
 
   <div>
-    <%= form.label :article_url, style: "display: block" %>
-    <%= form.text_field :article_url %>
+    <%= form.label :image_path, style: "display: block" %>
+    <%= form.text_field :image_path %>
   </div>
 
   <div>
-    <%= form.label :article_image_path, style: "display: block" %>
-    <%= form.text_field :article_image_path %>
+    <%= form.label :publication_date, style: "display: block" %>
+    <%= form.datetime_field :publication_date %>
   </div>
 
   <div>
-    <%= form.label :article_update_datetime, style: "display: block" %>
-    <%= form.datetime_field :article_update_datetime %>
-  </div>
-
-  <div>
-    <%= form.label :article_access_num, style: "display: block" %>
-    <%= form.number_field :article_access_num %>
+    <%= form.label :access_count, style: "display: block" %>
+    <%= form.number_field :access_count %>
   </div>
 
   <div>
