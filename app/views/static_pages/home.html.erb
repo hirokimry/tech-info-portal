@@ -103,19 +103,7 @@
     </ul>
     <div class="tab-content"
          id="pills-tabContent">
-      <div class="tab-pane fade show active"
-           id="pills-new-arrivals"
-           role="tabpanel"
-           aria-labelledby="pills-new-arrivals-tab">
-        <% @articles.order(publication_date: :desc).limit(10).each do |article| %>
-        <%= "#{article.publication_date}: #{article.medium_id}: " %>
-        <a href="<%= article.url %>"
-           class="link-secondary"
-           target=”_blank”>
-          <%= article.title %>
-        </a><br>
-        <% end %>
-      </div>
+      <%= render "new_articles" %>
       <div class="tab-pane fade"
            id="pills-daily-ranking"
            role="tabpanel"
@@ -138,34 +126,33 @@
   </div>
 
   <div class="row">
-    広告</div>
-  <div class="row">
-    <div class="col">
-      MediaName
-    </div>
-    <div class="col">
-      MediaName
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      MediaName
-    </div>
-    <div class="col">
-      MediaName
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">広告
-    </div>
-    <div class="col">広告
-    </div>
-  </div>
-</div>
 
-<footer class="footer">
-  <div class="container d-flex flex-column align-items-center">
-    <p class="text-muted">
-      Copyright © 2022 Hiroki Moriya All rights reserved.</p>
+    <div class="row">
+      <div class="col">
+        <%= @media.find(1).name %>
+        <%= render "new_articles" %>
+      </div>
+      <div class="col">
+        <%= @media.find(2).name %>
+        <%= render "new_articles" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <%= @media.find(3).name %>
+        <%= render "new_articles" %>
+      </div>
+      <div class="col">
+        <%= @media.find(4).name %>
+        <%= render "new_articles" %>
+      </div>
+    </div>
+
   </div>
-</footer>
+
+  <footer class="footer">
+    <div class="container d-flex flex-column align-items-center">
+      <p class="text-muted">
+        Copyright © 2022 Hiroki Moriya All rights reserved.</p>
+    </div>
+  </footer>

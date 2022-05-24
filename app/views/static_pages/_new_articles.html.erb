@@ -1,0 +1,15 @@
+<div class="tab-pane fade show active"
+     id="pills-new-arrivals"
+     role="tabpanel"
+     aria-labelledby="pills-new-arrivals-tab">
+  <% @articles.order(publication_date: :desc).limit(10).each do |article| %>
+  <a href="<%= article.url %>"
+     class="link-secondary"
+     target=”_blank”>
+    <%= article.title %>
+  </a>
+  <%= @media.find(article.medium_id).name %>
+  <%= "#{article.publication_date.strftime("%m/%d %H:%M").to_s}" %>
+  <br>
+  <% end %>
+</div>
