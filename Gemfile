@@ -78,3 +78,5 @@ gem 'rubocop-rails', require:false
 
 gem 'feedjira'
 gem 'httparty'
+
+gem "activesupport"

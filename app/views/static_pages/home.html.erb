@@ -104,24 +104,9 @@
     <div class="tab-content"
          id="pills-tabContent">
       <%= render "new_articles" %>
-      <div class="tab-pane fade"
-           id="pills-daily-ranking"
-           role="tabpanel"
-           aria-labelledby="pills-daily-ranking-tab">
-        デイリーランキング記事
-      </div>
-      <div class="tab-pane fade"
-           id="pills-weekly-ranking"
-           role="tabpanel"
-           aria-labelledby="pills-weekly-ranking-tab">
-        週間ランキング記事
-      </div>
-      <div class="tab-pane fade"
-           id="pills-monthly-ranking"
-           role="tabpanel"
-           aria-labelledby="pills-monthly-ranking-tab">
-        月間ランキング記事
-      </div>
+      <%= render "daily_ranking" %>
+      <%= render "weekly_ranking" %>
+      <%= render "monthly_ranking" %>
     </div>
   </div>
 

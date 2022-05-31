@@ -246,6 +246,7 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
+  activesupport
   bootsnap
   capybara
   cssbundling-rails

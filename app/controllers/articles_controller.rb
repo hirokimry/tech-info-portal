@@ -8,6 +8,8 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1 or /articles/1.json
   def show
+    @article.increment!(:access_count, 1)
+    redirect_to @article.url, allow_other_host: true
   end
 
   # GET /articles/new
