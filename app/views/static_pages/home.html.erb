@@ -26,14 +26,17 @@
             </a>
             <ul class="dropdown-menu"
                 aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item"
-                   href="#">A</a>
+              <li>
+                <%= link_to "#{@media.find(1).name}", @media.find(1).top_url, class:"dropdown-item", target: :_blank %>
               </li>
-              <li><a class="dropdown-item"
-                   href="#">B</a>
+              <li>
+                <%= link_to "#{@media.find(2).name}", @media.find(2).top_url, class:"dropdown-item", target: :_blank %>
               </li>
-              <li><a class="dropdown-item"
-                   href="#">C</a>
+              <li>
+                <%= link_to "#{@media.find(3).name}", @media.find(3).top_url, class:"dropdown-item", target: :_blank %>
+              </li>
+              <li>
+                <%= link_to "#{@media.find(4).name}", @media.find(4).top_url, class:"dropdown-item", target: :_blank %>
               </li>
             </ul>
           </li>
@@ -115,21 +118,21 @@
     <div class="row">
       <div class="col">
         <%= @media.find(1).name %>
-        <%= render "new_articles" %>
+        <%= render "specific_media_articles", media_id: 1 %>
       </div>
       <div class="col">
         <%= @media.find(2).name %>
-        <%= render "new_articles" %>
+        <%= render "specific_media_articles", media_id: 2 %>
       </div>
     </div>
     <div class="row">
       <div class="col">
         <%= @media.find(3).name %>
-        <%= render "new_articles" %>
+        <%= render "specific_media_articles", media_id: 3 %>
       </div>
       <div class="col">
         <%= @media.find(4).name %>
-        <%= render "new_articles" %>
+        <%= render "specific_media_articles", media_id: 4 %>
       </div>
     </div>
 

@@ -65,6 +65,6 @@ class MediaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def medium_params
-      params.require(:medium).permit(:name, :rss_url, :icon_path)
+      params.require(:medium).permit(:name, :top_url, :rss_url, :icon_path)
     end
 end

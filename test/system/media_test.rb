@@ -17,6 +17,7 @@ class MediaTest < ApplicationSystemTestCase
     fill_in "Icon path", with: @medium.icon_path
     fill_in "Name", with: @medium.name
     fill_in "Rss url", with: @medium.rss_url
+    fill_in "Top url", with: @medium.top_url
     click_on "Create Medium"
 
     assert_text "Medium was successfully created"
@@ -30,6 +31,7 @@ class MediaTest < ApplicationSystemTestCase
     fill_in "Icon path", with: @medium.icon_path
     fill_in "Name", with: @medium.name
     fill_in "Rss url", with: @medium.rss_url
+    fill_in "Top url", with: @medium.top_url
     click_on "Update Medium"
 
     assert_text "Medium was successfully updated"

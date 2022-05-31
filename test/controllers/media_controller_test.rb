@@ -17,7 +17,7 @@ class MediaControllerTest < ActionDispatch::IntegrationTest
 
   test "should create medium" do
     assert_difference("Medium.count") do
-      post media_url, params: { medium: { icon_path: @medium.icon_path, name: @medium.name, rss_url: @medium.rss_url } }
+      post media_url, params: { medium: { icon_path: @medium.icon_path, name: @medium.name, rss_url: @medium.rss_url, top_url: @medium.top_url } }
     end
 
     assert_redirected_to medium_url(Medium.last)
@@ -34,7 +34,7 @@ class MediaControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update medium" do
-    patch medium_url(@medium), params: { medium: { icon_path: @medium.icon_path, name: @medium.name, rss_url: @medium.rss_url } }
+    patch medium_url(@medium), params: { medium: { icon_path: @medium.icon_path, name: @medium.name, rss_url: @medium.rss_url, top_url: @medium.top_url } }
     assert_redirected_to medium_url(@medium)
   end
 
