@@ -5,9 +5,11 @@ one:
   top_url: MyString
   rss_url: MyString
   icon_path: MyString
+  logo_path: MyString
 
 two:
   name: MyString
   top_url: MyString
   rss_url: MyString
   icon_path: MyString
+  logo_path: MyString

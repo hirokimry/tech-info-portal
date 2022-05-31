@@ -15,6 +15,7 @@ class MediaTest < ApplicationSystemTestCase
     click_on "New medium"
 
     fill_in "Icon path", with: @medium.icon_path
+    fill_in "Logo path", with: @medium.logo_path
     fill_in "Name", with: @medium.name
     fill_in "Rss url", with: @medium.rss_url
     fill_in "Top url", with: @medium.top_url
@@ -29,6 +30,7 @@ class MediaTest < ApplicationSystemTestCase
     click_on "Edit this medium", match: :first
 
     fill_in "Icon path", with: @medium.icon_path
+    fill_in "Logo path", with: @medium.logo_path
     fill_in "Name", with: @medium.name
     fill_in "Rss url", with: @medium.rss_url
     fill_in "Top url", with: @medium.top_url

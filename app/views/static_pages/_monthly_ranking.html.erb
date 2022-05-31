@@ -1,11 +1,27 @@
-<div class="tab-pane fade"
-     id="pills-monthly-ranking"
-     role="tabpanel"
-     aria-labelledby="pills-monthly-ranking-tab">
-  <% @articles.where(publication_date: Time.now.beginning_of_month..Time.now.end_of_month).order(access_count: :desc).limit(10).each do |article| %>
-  <%= link_to "#{article.title}", article_path(article.id), class:"link-secondary", target: :_blank %>
-  <%= @media.find(article.medium_id).name %>
-  <%= "#{article.publication_date.strftime("%m/%d %H:%M").to_s}" %>
-  <br>
+<ul class="tab-pane fade"
+    id="pills-monthly-ranking"
+    role="tabpanel"
+    aria-labelledby="pills-monthly-ranking-tab">
+  <% rank_cnt = 0 %>
+  <% @articles.where(publication_date: 1.month.ago..Time.now).order(access_count: :desc).limit(10).each do |article| %>
+  <% rank_cnt += 1 %>
+  <li class="d-flex justify-content-start m-2"
+      style="border-bottom: solid 1.5px #593F3F">
+    <div class="d-flex justify-content-center align-items-center w-25">
+      <div id="ranking_no"
+           class="p-2 rounded-circle text-white bg-secondary"><%= rank_cnt %>
+      </div>
+      <%= link_to image_tag(@media.find(article.medium_id).logo_path, width: "50%", height: "auto"), article_path(article.id), class:"container d-flex justify-content-center align-self-center p-0 m-0 w-75", target: :_blank %>
+    </div>
+
+    <div class="flex-grow-1 w-75">
+      <%= link_to "#{article.title}", article_path(article.id), class:"link-secondary", target: :_blank, id:"article_link"%>
+      <div class="d-flex justify-content-end align-items-center">
+        <p class="small m-2"><%= @media.find(article.medium_id).name %></p>
+        <p class="small fw-lighter text-secondary m-2"><%= "#{article.publication_date.strftime("%m/%d %H:%M").to_s}" %>
+        </p>
+      </div>
+    </div>
+  </li>
   <% end %>
-</div>
+</ul>

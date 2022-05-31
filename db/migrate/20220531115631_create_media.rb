@@ -5,6 +5,7 @@ class CreateMedia < ActiveRecord::Migration[7.0]
       t.string :top_url
       t.string :rss_url
       t.string :icon_path
+      t.string :logo_path
 
       t.timestamps
     end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_31_015812) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_31_115631) do
   create_table "articles", force: :cascade do |t|
     t.integer "medium_id"
     t.string "title"
@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_31_015812) do
     t.string "top_url"
     t.string "rss_url"
     t.string "icon_path"
+    t.string "logo_path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

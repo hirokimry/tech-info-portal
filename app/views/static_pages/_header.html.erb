@@ -1,0 +1,41 @@
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-light"
+       style="background-color: #d7ccc8">
+    <div class="container-fluid d-flex justify-content-between">
+      <%= link_to "技術情報ニュースまとめ", "/", class:"navbar-brand", style:"color: #333333" %>
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse flex-grow-0"
+           id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"
+               href="#"
+               id="navbarDropdown"
+               role="button"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">
+              登録メディア一覧
+            </a>
+            <ul class="dropdown-menu"
+                style="background-color:#d7ccc8"
+                aria-labelledby="navbarDropdown">
+              <% @media.all.each do |medium| %>
+              <li>
+                <%= link_to "#{medium.name}", medium.top_url, class:"dropdown-item", target: :_blank, style:"color: #666666" %>
+              </li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

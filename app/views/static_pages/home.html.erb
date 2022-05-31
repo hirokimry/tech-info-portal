@@ -1,56 +1,11 @@
-<header class="header">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand"
-         href="#">LOGO</a>
-      <button class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse"
-           id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"
-               href="#"
-               id="navbarDropdown"
-               role="button"
-               data-bs-toggle="dropdown"
-               aria-expanded="false">
-              登録メディア一覧
-            </a>
-            <ul class="dropdown-menu"
-                aria-labelledby="navbarDropdown">
-              <li>
-                <%= link_to "#{@media.find(1).name}", @media.find(1).top_url, class:"dropdown-item", target: :_blank %>
-              </li>
-              <li>
-                <%= link_to "#{@media.find(2).name}", @media.find(2).top_url, class:"dropdown-item", target: :_blank %>
-              </li>
-              <li>
-                <%= link_to "#{@media.find(3).name}", @media.find(3).top_url, class:"dropdown-item", target: :_blank %>
-              </li>
-              <li>
-                <%= link_to "#{@media.find(4).name}", @media.find(4).top_url, class:"dropdown-item", target: :_blank %>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+<%= render "header" %>
 
-<div class="container-fluid d-flex flex-column align-items-center">
-  <div class="row">
-    <ul class="nav nav-pills mb-3"
+<div class="container-fluid d-flex flex-column">
+  <div class="row justify-content-center">
+    <ul class="nav nav-pills mb-3 justify-content-center"
         id="pills-tab"
-        role="tablist">
+        role="tablist"
+        style="background-color: #a1887f">
       <li class="nav-item"
           role="presentation">
         <button class="nav-link active"
@@ -104,7 +59,7 @@
         </button>
       </li>
     </ul>
-    <div class="tab-content"
+    <div class="tab-content w-75"
          id="pills-tabContent">
       <%= render "new_articles" %>
       <%= render "daily_ranking" %>
@@ -114,7 +69,6 @@
   </div>
 
   <div class="row">
-
     <div class="row">
       <div class="col">
         <%= @media.find(1).name %>
@@ -137,10 +91,15 @@
     </div>
 
   </div>
+</div>
 
-  <footer class="footer">
-    <div class="container d-flex flex-column align-items-center">
-      <p class="text-muted">
-        Copyright © 2022 Hiroki Moriya All rights reserved.</p>
-    </div>
-  </footer>
+<footer class="footer">
+  <div class="container d-flex flex-column align-items-center">
+    <%= link_to image_tag("TwitterIcon.png"), "https://twitter.com/hirokimry", target: :_blank %>
+    <%= link_to image_tag("GitHubIcon.png"), "https://github.com/hirokimry", target: :_blank %>
+    <%= link_to image_tag("LinkIcon.png"), "https://hirokimoriya.com/", target: :_blank %>
+    <p class="text-muted">
+      Copyright © 2022 Hiroki Moriya All rights reserved.
+    </p>
+  </div>
+</footer>
