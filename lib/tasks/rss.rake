@@ -1,5 +1,6 @@
 namespace :rss do
-  task get_rss: [:environment] do
+  desc 'Retrieve articles from rss'
+  task get_articles: [:environment] do
     Medium.all.each do |media|
       xml = HTTParty.get(media.rss_url).body
       content = Feedjira.parse xml
