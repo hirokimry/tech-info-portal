@@ -1,0 +1,15 @@
+current directory: /Users/hiroki/Public/development/TechInfoPortal/tech_info_portal_app/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/hiroki/.rbenv/versions/3.1.2/bin/ruby -I /Users/hiroki/.rbenv/versions/3.1.2/lib/ruby/site_ruby/3.1.0 -r ./siteconf20220601-15622-p92i8v.rb extconf.rb
+creating Makefile
+
+current directory: /Users/hiroki/Public/development/TechInfoPortal/tech_info_portal_app/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= clean
+
+current directory: /Users/hiroki/Public/development/TechInfoPortal/tech_info_portal_app/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\=
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/hiroki/Public/development/TechInfoPortal/tech_info_portal_app/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20220601-15622-rtj54i/skiptrace/internal
