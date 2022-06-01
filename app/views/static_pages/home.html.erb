@@ -59,7 +59,7 @@
         </button>
       </li>
     </ul>
-    <div class="tab-content w-75"
+    <div class="tab-content w-75 mb-5"
          id="pills-tabContent">
       <%= render "new_articles" %>
       <%= render "daily_ranking" %>
@@ -68,38 +68,15 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="row">
+  <div class="container">
+    <div class="row row-cols-2 g-5 mb-5">
+      <% @media.all.each do |medium| %>
       <div class="col">
-        <%= @media.find(1).name %>
-        <%= render "specific_media_articles", media_id: 1 %>
+        <%= render "specific_media_articles", media_id: medium.id %>
       </div>
-      <div class="col">
-        <%= @media.find(2).name %>
-        <%= render "specific_media_articles", media_id: 2 %>
-      </div>
+      <% end %>
     </div>
-    <div class="row">
-      <div class="col">
-        <%= @media.find(3).name %>
-        <%= render "specific_media_articles", media_id: 3 %>
-      </div>
-      <div class="col">
-        <%= @media.find(4).name %>
-        <%= render "specific_media_articles", media_id: 4 %>
-      </div>
-    </div>
-
   </div>
 </div>
 
-<footer class="footer">
-  <div class="container d-flex flex-column align-items-center">
-    <%= link_to image_tag("TwitterIcon.png"), "https://twitter.com/hirokimry", target: :_blank %>
-    <%= link_to image_tag("GitHubIcon.png"), "https://github.com/hirokimry", target: :_blank %>
-    <%= link_to image_tag("LinkIcon.png"), "https://hirokimoriya.com/", target: :_blank %>
-    <p class="text-muted">
-      Copyright © 2022 Hiroki Moriya All rights reserved.
-    </p>
-  </div>
-</footer>
+<%= render "footer" %>

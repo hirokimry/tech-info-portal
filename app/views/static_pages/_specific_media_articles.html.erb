@@ -1,7 +1,19 @@
-<div>
-  <% @articles.where(medium_id: media_id).order(publication_date: :desc).limit(10).each do |article| %>
-  <%= link_to "#{article.title}", article_path(article.id), class:"link-secondary", target: :_blank %>
-  <%= "#{article.publication_date.strftime("%m/%d %H:%M").to_s}" %>
-  <br>
-  <% end %>
+<div class="col shadow"
+     style="border: solid 1.5px #593F3F;">
+  <div class="d-flex justify-content-start align-items-center m-4 mb-0">
+    <%= link_to image_tag(@media.find(media_id).icon_path, width: "32px", height: "32px"), @media.find(media_id).top_url, class:"p-0", target: :_blank %>
+    <p class="fs-5 fw-bold m-0 ms-3">
+      <%= @media.find(media_id).name %>
+    </p>
+  </div>
+  <ul class="p-3">
+    <% @articles.where(medium_id: media_id).order(publication_date: :desc).limit(10).each do |article| %>
+    <li class="d-flex justify-content-between m-2"
+        style="border-bottom: solid 1.5px #593F3F">
+      <%= link_to "#{article.title}", article_path(article.id), class:"link-secondary align-self-center w-75", target: :_blank, id:"article_link"%>
+      <p class="small fw-lighter text-secondary m-2">
+        <%= "#{article.publication_date.strftime("%m/%d %H:%M").to_s}" %>
+    </li>
+    <% end %>
+  </ul>
 </div>
