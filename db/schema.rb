@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_31_115631) do
     t.string "url"
     t.string "image_path"
     t.datetime "publication_date"
-    t.integer "access_count"
+    t.integer "access_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
